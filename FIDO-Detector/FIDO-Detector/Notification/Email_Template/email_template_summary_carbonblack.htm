@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Fully Integrated Defense Operation">
+        <meta name="author" content="Rob Fry">
+        <title>FIDO</title>
+        <![endif]-->
+    </head>
+    <body style="background-color:#343435; max-width:1024px">
+        <header style="width:80%;padding-left:10%;padding-right:10%;max-width:1024px">
+            <table style="border-radius:8px;width:100%; height:200px">
+                <caption style="border-radius:8px;border:thin black solid; width:100%; font-weight:bold; font-size:x-large; border-bottom:thick; border-bottom-color:#3C8DBC; border-bottom-style:solid; background-color:#3F4243; color: white; text-align:center;">Fully Integrated Defense Operation (FIDO) v0.1 - Defense Notification</caption>
+                <thead>
+                    <tr>
+                        <th colspan="2" style="width:150px;height:30px;text-align:left;color:white;">
+                            <label id="lbRecommendation" style="font-weight:bold; text-align:left;">Recommendation:</label>
+                        </th>
+                        <th colspan="2" style="width:125px;height:30px;text-align:center;color:white;">
+                            <label id="lblTotalScore" style="font-weight:bold; text-align:center">Total Score:</label>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody style="height:50px">
+                    <tr>
+                        <th rowspan="8" colspan="2" style="background-color:#3F4243;border-radius:20px;min-width:200px">
+                            <br />
+                            <br />
+                            <label style="text-align: center; font-size:24pt; color:#3C8DBC; font-weight:bold">%recommendation%</label>
+                            <br />
+                            <br />
+                            <a href="%document_url%">
+                                <button type="button" style="border-radius:25px;margin: 10px; width:75%; min-height:175px; text-align:center; font-weight: normal; font-size: 16pt; text-indent: 10px;">%recommendationdetail%</button>
+                            </a>
+                        </th>
+                        <th rowspan="8" colspan="2" style="vertical-align:top">
+                            <img src="cid:totalscore" alt="" width="120" height="325" style="border-radius:10px" />
+                        </th>
+                    </tr>
+                </tbody>
+            </table>
+            <br />
+            <br />
+            <table style="border-radius:8px;width:100%; height:100px;background-color:#3F4243;">
+                <thead>
+                    <tr>
+                        <th style="height:30px;text-align:left;color:white;width:33%">User Score:</th>
+                        <th style="height:30px;text-align:left;color:white;width:33%">Machine Score:</th>
+                        <th style="height:30px;text-align:left;color:white;width:33%">Threat Score:</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="background-color:#C0C0C0;">
+                            <img src="cid:userscore" alt="Userscore" height="50px" width="100%" style="border-radius:10px;">
+                        </td>
+                        <td style="background-color:#C0C0C0;">
+                            <img src="cid:machinescore" alt="MachineScore" height="50px" width="100%" style="border-radius:10px;">
+                        </td>
+                        <td style="background-color:#C0C0C0;">
+                            <img src="cid:threatscore" alt="ThreatScore" dir="ltr" height="50px" width="100%">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <br />
+            %hostdetection%
+            <br />
+            <table style="background-color:#3F4243;border-radius:8px;width:100%; height:200px;">
+                <thead>
+                    <tr>
+                        <th style="height:30px;text-align:center;color:white;font-size:24px">Machine Information:</th>
+                    </tr>
+                </thead>
+                <tbody style="display: table-row-group;">
+                    <tr>
+                        <td style="width: 310px; color: rgb(255, 255, 255); display: table-cell; font-size: 18px; background-color: rgb(128, 128, 128);">Machine Name</td>
+                        <td style="background-color:#808080; color: #FFFFFF; text-align: center;">%machinename% : %srcip%</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:#C0C0C0;font-size:18px;padding-left:5px">OS</td>
+                        <td style="background-color:#C0C0C0; text-align: center;">%machineos%</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:#808080; color: #FFFFFF;font-size:18px;padding-left:5px">Domain</td>
+                        <td style="background-color:#808080; color: #FFFFFF; text-align: center;">%machinedomain%</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:#C0C0C0;font-size:18px;padding-left:5px">Patches (critical-high-low)</td>
+                        <td style="background-color:#C0C0C0; text-align: center;">%criticalpatches%, %highpatches%, %lowpatches%</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:#808080; color: #FFFFFF;font-size:18px;padding-left:5px">Carbon Black Installed</td>
+                        <td style="background-color:#808080; color: #FFFFFF; text-align: center;">%avinstalled%</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:#C0C0C0;font-size:18px;padding-left:5px">Carbon Black Running</td>
+                        <td style="background-color:#C0C0C0; text-align: center;">%avrunning%</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:#808080; color: #FFFFFF;font-size:18px;padding-left:5px">Sentinel Installed</td>
+                        <td style="background-color:#808080; color: #FFFFFF; text-align: center;">%avdefversion%</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:#C0C0C0;font-size:18px;padding-left:5px">Sentinal Running</td>
+                        <td style="background-color:#C0C0C0; text-align: center;">%bit9installed%</td>
+                    </tr>
+                    <tr style="display: table-row;">
+                        <td style="background-color:#808080; color: #FFFFFF;font-size:18px;padding-left:5px">Last Update Time:</td>
+                        <td style="background-color:#808080; color: #FFFFFF; text-align: center;">%clientlastupdate%</td>
+                    </tr>
+                </tbody>
+            </table>             
+            <br />
+            <table style="border-radius:8px;width:100%; height:200px;background-color:#3F4243;">
+                <thead>
+                    <tr>
+                        <th style="height:30px;text-align:center;color:white;font-size:24px">User Information:</th>
+                    </tr>
+                </thead>
+                <tbody style="display: table-row-group;">
+                    <tr style="background-color:#808080; color: #FFFFFF;">
+                        <td style="width:310px;font-size:18px;padding-left:5px">User Name</td>
+                        <td style="text-align: center;">%username%</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:#C0C0C0;font-size:18px;padding-left:5px">User Email</td>
+                        <td style="background-color:#C0C0C0; text-align: center;">%useremail%</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:#808080; color: #FFFFFF;font-size:18px;padding-left:5px">User Title</td>
+                        <td style="background-color:#808080; color: #FFFFFF; text-align: center;">%usertitle%</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:#C0C0C0;font-size:18px;padding-left:5px">Department</td>
+                        <td style="background-color:#C0C0C0; text-align: center;">%userdepartment%</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:#808080; color: #FFFFFF;font-size:18px;padding-left:5px">Employee Type</td>
+                        <td style="background-color:#808080; color: #FFFFFF; text-align: center;">%usertype%</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:#C0C0C0;font-size:18px;padding-left:5px">Phone</td>
+                        <td style="background-color:#C0C0C0; text-align: center;">%userphone%</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:#808080; color: #FFFFFF;font-size:18px;padding-left:5px">Cube Location</td>
+                        <td style="background-color:#808080; color: #FFFFFF; text-align: center;">%userlocation%</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:#C0C0C0;font-size:18px;padding-left:5px">City/State</td>
+                        <td style="background-color:#C0C0C0; text-align: center;">%usercitystate%</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:#808080; color: #FFFFFF;font-size:18px;padding-left:5px">Manager</td>
+                        <td style="background-color:#808080; color: #FFFFFF; text-align: center;">%managername%</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:#C0C0C0;font-size:18px;padding-left:5px">Manager Title</td>
+                        <td style="background-color:#C0C0C0; text-align: center;">%managertitle%</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:#808080; color: #FFFFFF;font-size:18px;padding-left:5px">Manager Email</td>
+                        <td style="background-color:#808080; color: #FFFFFF; text-align: center;">%manageremail%</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:#C0C0C0;font-size:18px;padding-left:5px">Manager Phone</td>
+                        <td style="background-color:#C0C0C0; text-align: center;">%managerphone%</td>
+                    </tr>
+                </tbody>
+            </table>
+            <br />
+            <table style="background-color:#3F4243;border-radius:8px;width:100%; height:200px">
+                <thead>
+                    <tr>
+                        <th style="height:30px;text-align:center;color:white;font-size:24px">Threat Information:</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="width:310px;background-color:#808080; color: #FFFFFF;">1. Threat Filename/Location</td>
+                        <td style="background-color:#808080; color: #FFFFFF; text-align: center;">%threatfile%</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:#C0C0C0;">2. Hostcount:</td>
+                        <td style="background-color:#C0C0C0; text-align: center;">%hostcount%</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:#808080; color: #FFFFFF;">3. Network Connections:</td>
+                        <td style="background-color:#808080; color: #FFFFFF; text-align: center;">%netconns%</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:#C0C0C0;">4. Threat Name:</td>
+                        <td style="background-color:#C0C0C0; text-align: center;">%malwaretype%</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:#808080; color: #FFFFFF;">5. Time Occurred:</td>
+                        <td style="background-color:#808080; color: #FFFFFF; text-align: center;">%timeoccurred%</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:#C0C0C0;">6. Detector</td>
+                        <td style="background-color:#C0C0C0; text-align: center;">%detector%</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:#808080; color: #FFFFFF;">7. Other Detectors Alerted?</td>
+                        <td style="background-color:#808080; color: #FFFFFF; text-align: center;">%detectors%</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:#C0C0C0;">8. Machine Previously Alerted?</td>
+                        <td style="background-color:#C0C0C0; text-align:center">%prevmach%</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:#808080; color: #FFFFFF;">9. User Previously Alerted?</td>
+                        <td style="background-color:#808080; color: #FFFFFF; text-align:center">%prevuser%</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:#C0C0C0;">10. URL Seen Before?</td>
+                        <td style="background-color:#C0C0C0; text-align:center">%prevurl%</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:#808080; color: #FFFFFF;">11. Hash Seen Before?</td>
+                        <td style="background-color:#808080; color: #FFFFFF; text-align:center">%prevhash%</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:#C0C0C0;">12. IP Seen Before?</td>
+                        <td style="background-color:#C0C0C0; text-align:center">%previp%</td>
+                    </tr>
+                </tbody>
+                <br />
+                <thead>
+                    <tr>
+                        <th colspan="2" style="background-color:#808080; color: #FFFFFF;">Detailed Threat Information:</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="background-color:#FFFFFF; color: #000000; font-weight: bold;">Virus Total:</td>
+                        <td style="font-weight: bold; background-color: #3C8DBC; text-align: center; color:#ffffff">%virustotalscore%</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:#C0C0C0;">Total # of URLs (bad/good)</td>
+                        <td style="background-color:#C0C0C0; text-align: center;">%totalbadurls% / %totalgoodurls%</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:#C0C0C0;">Total # of Files (bad/good)</td>
+                        <td style="background-color:#C0C0C0; text-align: center;">%totalbadfiles% / %totalgoodfiles%</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:#C0C0C0;">Latest Detected URLs for IP</td>
+                        <td style="background-color:#C0C0C0; text-align: center;">%totaldetectedurl%</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:#C0C0C0;">Latest Detected Files for IP</td>
+                        <td style="background-color:#C0C0C0; text-align: center;">%totaldetectedip%</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:#C0C0C0;">Latest Detected CNC to IP</td>
+                        <td style="background-color:#C0C0C0; text-align: center;">%cncip%</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:#FFFFFF; color: #000000; font-weight: bold;">ThreatGRID:</td>
+                        <td style="font-weight: bold;background-color: #3C8DBC; text-align: center; color:#ffffff">%threatgridscore%</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:#C0C0C0;">Average Severity Score:</td>
+                        <td style="background-color:#C0C0C0; text-align: center;">%threatgridseverity%</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:#C0C0C0;">Average Confidence Score</td>
+                        <td style="background-color:#C0C0C0; text-align: center;">%threatgridconfidence%</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:#C0C0C0;">Average Threat Indicators Detected:</td>
+                        <td style="background-color:#C0C0C0; text-align: center;">%threatgridindicators%</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:#FFFFFF; color: #000000; font-weight: bold;">OpenDNS:</td>
+                        <td style="background-color:#3C8DBC; color: #000000; font-weight: bold;"></td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:#C0C0C0;">Blacklisted:</td>
+                        <td style="background-color:#C0C0C0; text-align: center;">n/a</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:#C0C0C0;">Malicious Domain:</td>
+                        <td style="background-color:#C0C0C0; text-align: center;">n/a</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:#FFFFFF; color: #000000; font-weight: bold;">AlienVault</td>
+                        <td style="background-color:#FFFFFF; color: #000000; font-weight: bold; text-align: center;"></td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:#C0C0C0;">Risk Score:</td>
+                        <td style="background-color:#C0C0C0; text-align: center;">45</td>
+                    </tr>
+                </tbody>
+            </table>
+            <br />
+            <table style="background-color:#3F4243;border-radius:8px;width:100%; height:200px">
+                <thead style="color:white;">
+                    <th>
+                        <label>Actions Taken:</label>
+                    </th>
+                    <th>
+                        <label>Success or Fail:</label>
+                    </th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="width:310px;background-color:#C0C0C0; height:50px; vertical-align: middle; text-indent: 5px;">1. %action1a%</td>
+                        <td style="background-color:#C0C0C0; height:50px; vertical-align: middle; text-align: center;">%action1b%</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:#808080; color: #FFFFFF; height:50px; vertical-align: middle; text-indent: 5px;">2. %action2a%</td>
+                        <td style="background-color:#808080; color: #FFFFFF; height:50px; vertical-align: middle; text-align: center;">%action2b%</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:#C0C0C0; height:50px; vertical-align: middle; text-indent: 5px;">3. %action3a%</td>
+                        <td style="background-color:#C0C0C0; height:50px; vertical-align: middle; text-align: center;">%action3b%</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:#808080; color: #FFFFFF; height:50px; vertical-align: middle; text-indent: 5px;">4. %action4a%</td>
+                        <td style="background-color:#808080; color: #FFFFFF; height:50px; vertical-align: middle; text-align: center;">%action4b%</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:#C0C0C0; height:50px; vertical-align: middle; vertical-align: middle; text-indent: 5px;">5. %action5a%</td>
+                        <td style="background-color:#C0C0C0; height:50px; vertical-align: middle; text-align: center;">%action5b%</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:#808080; color: #FFFFFF; height:50px; vertical-align: middle; text-indent: 5px;">6. %action6a%</td>
+                        <td style="background-color:#808080; color: #FFFFFF; height:50px; vertical-align: middle; text-align: center;">%action6b%</td>
+                    </tr>
+                </tbody>
+            </table>
+        </header>
+        <br />
+        <footer style="background-color: #3F4243;width:100%;text-align:left;text-indent:10%">
+            <strong style="color: white">Copyright ©2015 <a style="color:#3C8DBC;" href="http://github.com/netflix/fido">Netflix Security</a></strong>
+        </footer>
+    </body>
+</html>

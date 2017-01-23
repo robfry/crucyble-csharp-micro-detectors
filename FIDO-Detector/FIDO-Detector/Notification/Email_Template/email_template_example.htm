@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Fully Integrated Defense Operation">
+        <meta name="author" content="Rob Fry">
+        <title>FIDO</title>
+        <!-- jQuery 2.1.4 -->         
+        <script src="plugins/jQuery/jQuery-2.1.4.min.js"></script>         
+    </head>
+    <body style="background-color:#343435;">
+        <header style="width:80%;padding-left:10%;padding-right:10%">
+            <table style="border-radius:8px;width:100%; height:200px">
+                <caption style="border-radius:8px;border:thin black solid; width:100%; font-weight:bold; font-size:x-large; border-bottom:thick; border-bottom-color:#3C8DBC; border-bottom-style:solid; background-color:#3F4243; color: white; text-align:center;">Fully Integrated Defense Operation (FIDO) v0.1 - Defense Notification
+                    <br>
+                </caption>
+                <thead>
+                    <tr>
+                        <th colspan="2" style="width:150px;height:30px;text-align:left;color:white;">
+                            <label id="lbRecommendation" style="font-weight:bold; text-align:left;">Recommendation:</label>
+                        </th>
+                        <th colspan="2" style="width:125px;height:30px;text-align:center;color:white;">
+                            <label id="lblTotalScore" style="font-weight:bold; text-align:center">Total Score:</label>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody style="height:40px">
+                    <tr>
+                        <th rowspan="8" colspan="2" style="background-color:#3F4243;border-radius:20px;min-width:200px">
+                            <label style="text-align: center; font-size:24pt; color:#3C8DBC; font-weight:bold">Scan, Patch and Release</label>
+                            <br>
+                            <br>
+                            <button type="button" data-trigger="hover" data-toggle="tooltip" data-placement="top" title="Things are getting real in here!Things are getting real in here!Things are getting real in here!Things are getting real in here!Things are getting real in here!Things are getting real in here!Things are getting real in here!Things are getting real in here!Things are getting real in here!Things are getting real in here!Things are getting real in here!Things are getting real in here!Things are getting real in here!Things are getting real in here!Things are getting real in here!" style="border-radius: 25px; margin: 10px; width: 75%; min-height: 105px; text-align: center; font-weight: normal; font-size: 16pt; text-indent: 10px; display: inline-block;">System has been isolated. Please
+                                <br>scan system then patch and 
+                                <br>release
+                                to the user.
+                            </button>
+                        </th>
+                        <th rowspan="8" colspan="2">
+                            <img src="../gauge/total80.png" alt="" width="120" height="325" style="border-radius:10px">
+                        </th>
+                    </tr>
+                </tbody>
+            </table>
+            <br />
+            <br />
+            <table style="border-radius:8px;width:100%; height:100px;background-color:#3F4243;font-size:24px">
+                <thead>
+                    <tr>
+                        <th style="height:30px;text-align:center;color:white;width:33%">User Score:</th>
+                        <th style="height:30px;text-align:center;color:white;width:33%">Machine Score:</th>
+                        <th style="height:30px;text-align:center;color:white;width:33%">Threat Score:</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="background-color:#C0C0C0;">
+                            <img src="../gauge/red0.png" alt="Userscore" height="50px" width="100%" style="border-radius:10px;">
+                        </td>
+                        <td style="background-color:#C0C0C0;">
+                            <img src="../gauge/red20.png" alt="MachineScore" height="50px" width="100%" style="border-radius:10px;">
+                        </td>
+                        <td style="background-color:#C0C0C0;">
+                            <img src="../gauge/red60.png" alt="ThreatScore" dir="ltr" height="50px" width="100%">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <br /> 
+            <table style="background-color:#3F4243;border-radius:8px;width:100%; height:200px">
+                <thead>
+                    <tr>
+                        <th style="height:30px;text-align:center;color:white;font-size:24px">Machine Information:</th>
+                    </tr>
+                </thead>
+                <tbody style="display: table-row-group;">
+                    <tr>
+                        <td style="width: 310px; color: rgb(255, 255, 255); display: table-cell; background-color: rgb(128, 128, 128);font-size:18px;">1. Machine Name</td>
+                        <td style="background-color:#808080; color: #FFFFFF; text-align: center;">windows-user : 10.1.1.1</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:#C0C0C0;font-size:18px;">2. OS</td>
+                        <td style="background-color:#C0C0C0; text-align: center;">Windows 7 Enterprise</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:#808080; color: #FFFFFF;font-size:18px;">3. Domain</td>
+                        <td style="background-color:#808080; color: #FFFFFF; text-align: center;">corp.com</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:#C0C0C0;font-size:18px;">4. Patches (critical-high-low)</td>
+                        <td style="background-color:#C0C0C0; text-align: center;">Critical: 6, High: 9, Low: 4</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:#808080; color: #FFFFFF;font-size:18px;">5. Sentinel Installed</td>
+                        <td style="background-color:#808080; color: #FFFFFF; text-align: center;">Yes</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:#C0C0C0;font-size:18px;">6. Sentinel Running</td>
+                        <td style="background-color:#C0C0C0; text-align: center;">Yes</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:#808080; color: #FFFFFF;font-size:18px;">7. Sentinel Version</td>
+                        <td style="background-color:#808080; color: #FFFFFF; text-align: center;">1.538578</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:#C0C0C0;font-size:18px;">8. CB Installed</td>
+                        <td style="background-color:#C0C0C0; text-align: center;">Yes</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:#808080; color: #FFFFFF;font-size:18px;">9. CB Running</td>
+                        <td style="background-color:#808080; color: #FFFFFF; text-align: center;">Yes</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:#C0C0C0;"></td>
+                        <td style="background-color:#C0C0C0; text-align: center;">Hostname Validation</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:#808080; color: #FFFFFF;font-size:18px;">Hostname Validation Method:</td>
+                        <td style="background-color:#808080; color: #FFFFFF; text-align: center;">Windows RPC</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:#C0C0C0;font-size:18px;">Last Update Time:</td>
+                        <td style="background-color:#C0C0C0; text-align: center;">9/1/2015 10:56:01 AM</td>
+                    </tr>
+                </tbody>
+            </table>
+            <br />
+            <table style="border-radius:8px;width:100%; height:200px;background-color:#3F4243;">
+                <thead>
+                    <tr>
+                        <th style="height:30px;text-align:center;color:white;font-size:24px">User Information:</th>
+                    </tr>
+                </thead>
+                <tbody style="display: table-row-group;">
+                    <tr style="background-color:#808080; color: #FFFFFF;">
+                        <td style="width:310px;font-size:18px;">1. User Name</td>
+                        <td style="text-align: center;">Jill Smith</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:#C0C0C0;font-size:18px;">2. User Email</td>
+                        <td style="background-color:#C0C0C0; text-align: center;">jill@mail.com</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:#808080; color: #FFFFFF;font-size:18px;">3. User Title</td>
+                        <td style="background-color:#808080; color: #FFFFFF; text-align: center;">Director of Talent</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:#C0C0C0;font-size:18px;">4. Department</td>
+                        <td style="background-color:#C0C0C0; text-align: center;">Human Resources</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:#808080; color: #FFFFFF;font-size:18px;">5. Employee Type</td>
+                        <td style="background-color:#808080; color: #FFFFFF; text-align: center;">Full-time</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:#C0C0C0;font-size:18px;">6. Phone</td>
+                        <td style="background-color:#C0C0C0; text-align: center;">408-555-5555</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:#808080; color: #FFFFFF;font-size:18px;">7. Cube Location</td>
+                        <td style="background-color:#808080; color: #FFFFFF; text-align: center;">B1-5126</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:#C0C0C0;font-size:18px;">8. City/State</td>
+                        <td style="background-color:#C0C0C0; text-align: center;">Los Gatos, CA</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:#808080; color: #FFFFFF;font-size:18px;">9. Manager</td>
+                        <td style="background-color:#808080; color: #FFFFFF; text-align: center;">Jenny Smith</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:#C0C0C0;font-size:18px;">10. Manager Title</td>
+                        <td style="background-color:#C0C0C0; text-align: center;">VP, Talent</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:#808080; color: #FFFFFF;font-size:18px;">11. Manager Email</td>
+                        <td style="background-color:#808080; color: #FFFFFF; text-align: center;">jenny@mail.com</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:#C0C0C0;font-size:18px;">12. Manager Phone</td>
+                        <td style="background-color:#C0C0C0; text-align: center;">408-555-5555</td>
+                    </tr>
+                </tbody>
+            </table>
+            <br />
+            <table style="background-color:#3F4243;border-radius:8px;width:100%; height:200px">
+                <thead>
+                    <tr>
+                        <th style="height:30px;text-align:center;color:white;font-size:24px">Threat Information:</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="width:310px;background-color:#808080; color: #FFFFFF;font-size:18px;">1. Threat IP Address</td>
+                        <td style="background-color:#808080; color: #FFFFFF; text-align: center;">162.209.122.21</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:#C0C0C0;font-size:18px;">2. DNS Name &amp; Record Type:</td>
+                        <td style="background-color:#C0C0C0; text-align: center;">api(.)opencandy(.)com</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:#808080; color: #FFFFFF;font-size:18px;">3. ASN &amp; Location:</td>
+                        <td style="background-color:#808080; color: #FFFFFF; text-align: center;">RackSpace Hosting
+                            <br>United States, 86400
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:#C0C0C0;font-size:18px;">4. Threat Name:</td>
+                        <td style="background-color:#C0C0C0; text-align: center;">Suspicious OpenCandy</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:#808080; color: #FFFFFF;font-size:18px;">5. Time Occurred:</td>
+                        <td style="background-color:#808080; color: #FFFFFF; text-align: center;">09/09/2015 15:01:32 (UTC)
+                            <br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:#C0C0C0;font-size:18px;">6. Detector</td>
+                        <td style="background-color:#C0C0C0; text-align: center;">Cyphort</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:#808080; color: #FFFFFF;font-size:18px;">7. Other Detectors Alerted?</td>
+                        <td style="background-color:#808080; color: #FFFFFF; text-align: center;">Carbon Black, ProtectWise</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:#C0C0C0;font-size:18px;">8. Machine Previously Alerted?</td>
+                        <td style="background-color:#C0C0C0; text-align:center">No</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:#808080; color: #FFFFFF;font-size:18px;">9. User Previously Alerted?</td>
+                        <td style="background-color:#808080; color: #FFFFFF; text-align:center">No</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:#C0C0C0;font-size:18px;">10. URL Seen Before?</td>
+                        <td style="background-color:#C0C0C0; text-align:center">Yes</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:#808080; color: #FFFFFF;font-size:18px;">11. Hash Seen Before?</td>
+                        <td style="background-color:#808080; color: #FFFFFF; text-align:center">Yes</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:#C0C0C0;font-size:18px;">12. IP Seen Before?</td>
+                        <td style="background-color:#C0C0C0; text-align:center">Yes</td>
+                    </tr>
+                </tbody>
+                <thead>
+                    <tr>
+                        <th colspan="2" style="background-color:#808080; color: #FFFFFF;text-align:left;text-indent:40px;font-size:20px">Detailed Threat Information:</th>
+                    </tr>
+                </thead>
+                <tbody style="display: table-row-group;">
+                    <tr>
+                        <td style="background-color:#FFFFFF; color: #000000; font-weight: bold;font-size:18px;">Virus Total:</td>
+                        <td style="font-weight: bold; background-color: #3C8DBC; text-align: center; color:#ffffff">91</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:#C0C0C0;">Total # of URLs (bad/good)</td>
+                        <td style="background-color:#C0C0C0; text-align: center;">
+                            <a href="https://www.virustotal.com/url/6c2f614c6f9294251107dffb6ad47dcaaf9df2296a11fa53425e1ee8708a3872/analysis/1441313943">1</a>, 2, 3 / 
+                            <a href="https://www.virustotal.com/url/94b3e0ff5c44e1fbdc55e1373d9c7adc04587ffbb62b04c64daebfb0c62c08f0/analysis/1441190575">1</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:#C0C0C0;">Total # of Files (bad/good)</td>
+                        <td style="background-color:#C0C0C0; text-align: center;">0 / 0</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:#C0C0C0;">Latest Detected URLs for IP</td>
+                        <td style="background-color:#C0C0C0; text-align: center;">
+                            <a href="https://www.virustotal.com/url/6c2f614c6f9294251107dffb6ad47dcaaf9df2296a11fa53425e1ee8708a3872/analysis/1441313943/" www.virustotal.com="" en="" ip-address="" 162.209.122.21="" information="" style="display: inline-block;">198 Detected</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:#C0C0C0;">Latest Detected Files for IP</td>
+                        <td style="background-color:#C0C0C0; text-align: center;">None Detected</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:#C0C0C0;">Latest Detected CNC to IP</td>
+                        <td style="background-color:#C0C0C0; text-align: center;">
+                            <a href="https://www.virustotal.com/url/6c2f614c6f9294251107dffb6ad47dcaaf9df2296a11fa53425e1ee8708a3872/analysis/1441313943/" www.virustotal.com="" en="" ip-address="" 162.209.122.21="" information="" style="display: inline-block;">200 Detected</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:#FFFFFF; color: #000000; font-weight: bold;font-size:18px;">ThreatGRID:</td>
+                        <td style="font-weight: bold; text-align: center; color: rgb(255, 255, 255); display: table-cell; background-color: rgb(60, 141, 188);">
+                            <a href="http://fido101.corp.netflix.com/tg-report.html" target="_blank">72</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:#C0C0C0;">Average Severity Score:</td>
+                        <td style="background-color:#C0C0C0; text-align: center;">85</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:#C0C0C0;">Average Confidence Score</td>
+                        <td style="background-color:#C0C0C0; text-align: center;">100</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:#C0C0C0;">Average Threat Indicators Detected:</td>
+                        <td style="background-color:#C0C0C0; text-align: center;">17</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:#FFFFFF; color: #000000; font-weight: bold;font-size:18px;">OpenDNS:</td>
+                        <td style="font-weight: bold; text-align: center; color: rgb(255, 255, 255); display: table-cell; background-color: rgb(60, 141, 188);">15</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:#C0C0C0;">Blacklisted:</td>
+                        <td style="background-color:#C0C0C0; text-align: center;">User Blocked</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:#C0C0C0;">Malicious Domain:</td>
+                        <td style="background-color:#C0C0C0; text-align: center;">n/a</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:#C0C0C0;">SecureRank 2:</td>
+                        <td style="background-color:#C0C0C0; text-align: center;">-34.17</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:#C0C0C0;">TTL</td>
+                        <td style="background-color:#C0C0C0; text-align: center;">300 secs</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:#FFFFFF; color: #000000; font-weight: bold;font-size:18px;">AlienVault</td>
+                        <td style="background-color:#FFFFFF; color: #000000; font-weight: bold; text-align: center;"></td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:#C0C0C0;">Risk Score:</td>
+                        <td style="background-color:#C0C0C0; text-align: center;">45</td>
+                    </tr>
+                </tbody>
+            </table>
+            <br />
+            <table style="background-color:#3F4243;border-radius:8px;width:100%; height:200px">
+                <thead style="color:white;">
+                    <th style="font-size:24px;">
+                        <label>Actions Taken:</label>
+                    </th>
+                    <th>
+                        <label style="font-size:24px;">Success or Fail:</label>
+                    </th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="width:310px;background-color:#C0C0C0; height:50px; vertical-align: middle; text-indent: 5px;font-size:18px;">1. Ticket Created</td>
+                        <td style="background-color:#C0C0C0; height:50px; vertical-align: middle; text-align: center;">Success</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:#808080; color: #FFFFFF; height:50px; vertical-align: middle; text-indent: 5px;font-size:18px;">2. Client Sanboxed</td>
+                        <td style="background-color:#808080; color: #FFFFFF; height:50px; vertical-align: middle; text-align: center;">Success</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:#C0C0C0; height:50px; vertical-align: middle; text-indent: 5px;font-size:18px;">3. Notfication Sent</td>
+                        <td style="background-color:#C0C0C0; height:50px; vertical-align: middle; text-align: center;">Success</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:#808080; color: #FFFFFF; height:50px; vertical-align: middle; text-indent: 5px;font-size:18px;">4. Database Updated</td>
+                        <td style="background-color:#808080; color: #FFFFFF; height:50px; vertical-align: middle; text-align: center;">Success</td>
+                    </tr>
+                </tbody>
+            </table>
+            <br />
+            <table style="background-color:#3F4243;border-radius:8px;width:100%;">
+                <thead style="color:white;">
+                    <th style="font-size:24px;">Interactive Enforcement:</th>
+                </thead>
+                <tbody style="height:100px;overflow:auto;">
+                    <tr>
+                        <td style="background-color:#808080; height:50px; vertical-align: middle; text-indent: 5px;align-items:centers;">Send command to machine to turn off the NIC.</td>
+                        <td style="background-color:#808080; height:50px; vertical-align: middle; text-indent: 5px;align-items:centers;">
+                            <div>
+                                <button type="button" style="border-radius:5px;font-size:20px;">Kill Nic</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:#808080; height:50px; vertical-align: middle; text-indent: 5px;align-items:centers;">Send command to agent on machine to isolate system.</td>
+                        <td style="background-color:#808080; height:50px; vertical-align: middle; text-indent: 5px;align-items:centers;">
+                            <div>
+                                <button style="border-radius:5px;font-size:20px;" type="button">Client Sandboxing</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:#808080; height:50px; vertical-align: middle; text-indent: 5px;align-items:centers;">Send command to NAC to isolate system.</td>
+                        <td style="background-color:#808080; height:50px; vertical-align: middle; text-indent: 5px;align-items:centers;">
+                            <div>
+                                <button style="border-radius:5px;font-size:20px;" type="button">Network Sandboxing</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:#808080; height:50px; vertical-align: middle; text-indent: 5px;align-items:centers;">Notify the user their system has been compromised.</td>
+                        <td style="background-color:#808080; height:50px; vertical-align: middle; text-indent: 5px;align-items:centers;">
+                            <div>
+                                <button style="border-radius: 5px; font-size: 20px; display: inline-block;" type="button">Notify</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:#808080; height:50px; vertical-align: middle; text-indent: 5px;align-items:centers;">Add MAC address to DHCP blacklist to prevent IP renewal.</td>
+                        <td style="background-color:#808080; height:50px; vertical-align: middle; text-indent: 5px;align-items:centers;">
+                            <div>
+                                <button style="border-radius:5px;font-size:20px;" type="button">DHCP Blacklist</button>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <br />
+        </header>
+        <footer style="background-color: #3F4243;width:100%;text-align:center;">
+            <strong style="color: white">Copyright ©2015 <a style="color:#3C8DBC;" href="http://github.com/netflix/fido">Netflix Security</a></strong>
+        </footer>
+    </body>
+</html>
